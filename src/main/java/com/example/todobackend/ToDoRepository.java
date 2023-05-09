@@ -11,4 +11,6 @@ public interface ToDoRepository extends JpaRepository<ToDo, Integer> {
     int countByStatus(ToDoStatus status);
 
     List<ToDo> findTop3ByStatusIsNotOrderByDueDateAsc(ToDoStatus status);
+
+    List<ToDo> findAllByStatus(ToDoStatus status);
 }

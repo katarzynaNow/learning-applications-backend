@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
@@ -64,5 +66,10 @@ public class ToDoService {
     public List<ToDo> upcoming() {
         return repository.findTop3ByStatusIsNotOrderByDueDateAsc(
                 ToDoStatus.COMPLETED);
+    }
+
+
+    public List<ToDo> search(ToDoStatus status) {
+        return repository.findAllByStatus(status);
     }
 }

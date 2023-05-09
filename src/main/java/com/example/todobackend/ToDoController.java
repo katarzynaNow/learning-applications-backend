@@ -51,4 +51,9 @@ public class ToDoController {
         return toDoService.upcoming();
     }
 
+    @GetMapping("/search/{status}")
+    public List<ToDo> search(@PathVariable ToDoStatus status){
+        return toDoService.search(status);
+    }
+
 }
