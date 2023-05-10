@@ -1,4 +1,4 @@
-package com.example.todobackend;
+package com.example.todobackend.todo;
 
 import javax.persistence.*;
 

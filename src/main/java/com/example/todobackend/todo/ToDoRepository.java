@@ -1,4 +1,4 @@
-package com.example.todobackend;
+package com.example.todobackend.todo;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
