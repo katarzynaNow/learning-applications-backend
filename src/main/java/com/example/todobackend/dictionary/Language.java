@@ -3,7 +3,6 @@ package com.example.todobackend.dictionary;
 import javax.persistence.*;
 
 @Entity
-@Table
 public class Language {
 
     @Id
